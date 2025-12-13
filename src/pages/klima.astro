@@ -6,6 +6,22 @@ import { Image } from 'astro:assets';
 import Footer from "../components/Footer.astro";
 ---
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+:root {
+  --font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
+  --font-inter: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif !important;
+}
+p {
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif !important;
+}
+</style>
+
 <MainLayout title="Titel">
 
 
@@ -13,7 +29,7 @@ import Footer from "../components/Footer.astro";
 
 <h1 class="text-white mt-0 pt-10 text-center text-[64px] uppercase font-bold ">Ressourcer og materialer</h1>
 
-<div class=" place-content-center grid sm:grid-cols-1 lg:grid-cols-2 p-4  gap-0 lg:gap-4 max-w-[1200px] mx-auto">
+<div class=" place-content-center grid sm:grid-cols-1 lg:grid-cols-2 p-4  gap-0 lg:gap-4 max-w-300 mx-auto">
   <div class="mt-0 p-2">
   
   </div>

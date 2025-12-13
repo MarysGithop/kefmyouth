@@ -3,6 +3,21 @@ import Link from "./Link.astro";
 import Button from "./Button.astro";
 
 ---
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+:root {
+  --font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
+  --font-inter: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif !important;
+}
+p {
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif !important;
+}
+</style>
 <div x-data="{ showmenu: false }" class=" text-black bg-white p-4 fixed lg:static w-full z-40 top-0" >
     <div id="navbar" class="flex flex-row items-center justify-between">
         <div id="logo" class="my-auto lg:text-1xl">
