@@ -13,33 +13,14 @@ import Footer from "../components/Footer.astro";
 <MainLayout title="Titel">
 	<article class="[&_section]:pb-12 [&_h1]:text-5xl lg:[&_h1]:text-[64px] [&_h1]:uppercase [&_h1]:font-bold bg-neutral">
 			<!-- Hero -->
-			<section class="px-2.5 bg-dark-green">
-				<div class="lg:flex lg:max-w-300 mx-auto">
-					<div class="lg:order-2 sm:mb-25">
-						<img src="/illustrations/hero.svg" alt="" class="mb-12 lg:mb-0">
-					</div>
-					<div class="content-center">
-						<div class="text-white">
-							<h1 class="mb-4">Digital <br> Cleanup Day</h1>
-							<p>Lad os rydde op i vores digitale affald på <span class="text-accent-orange">World Cleanup Day</span> og gøre vores del for miljøet!</p>
-							<div class="flex gap-8">
-								<Button variant="secondary" size="small">Inviter en ven</Button>
-								<Button size="small">Registrer dit bidrag</Button>
-							</div>
-						</div>
-						<div class="[&_span]:text-white grid sm:grid-cols-1 lg:grid-cols-2 animate-bounce py-12 ">
-							<div class="row-start-1 col-start-1 m-auto"><img src="/illustrations/shape.svg" alt=""></div>
-							<div class="row-start-1 col-start-1 m-auto z-2">
-								<img src="/illustrations/megaphone.svg" alt="" class="mx-auto">
-								<p class="text-xl font-bold uppercase text-green1">
-								<span>Save the date</span> <br>
-								15. Marts 2025 
-								</p>
-							</div>
-						</div>
+			<section class="relative px-2.5 bg-dark-green min-h-125 lg:min-h-162.5 flex items-end">
+				<img src="/hero.jpg" alt="Hero background" class="absolute inset-0 w-full h-full object-cover z-0" style="object-position: top;" />
+				<img src="/heroshade_blue.png" alt="Hero shade" class="absolute bottom-0 left-0 w-full h-32 lg:h-40 z-10 pointer-events-none" style="object-fit:cover;" />
+				<div class="absolute bottom-0 left-0 w-full flex flex-col items-start justify-center z-20" style="height:8rem; /* h-32 */ @media (min-width:1024px){height:10rem;} /* lg:h-40 */">
+					<div class="w-full flex flex-col justify-center h-full pl-8">
+						<h1 class="mb-2 text-white text-left relative z-30">Velkommen til Klima ministeriets ungdoms side!</h1>
 					</div>
 				</div>
-				
 			</section>
 		
 			<img src="/dividers/bottom1.svg" alt="" class=" mt-0">
@@ -224,6 +205,21 @@ import Footer from "../components/Footer.astro";
 </MainLayout>
 
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+	:root {
+		--font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
+		--font-inter: 'Inter', Arial, Helvetica, sans-serif;
+	}
+
+	html, body, * {
+		font-family: var(--font-roboto) !important;
+	}
+
+	p {
+		font-family: var(--font-inter) !important;
+	}
+
 	section{
 		padding: 24px 10px;
 	}
