@@ -3,31 +3,30 @@ import Link from "./Link.astro";
 import Button from "./Button.astro";
 
 ---
-<div x-data="{ showmenu: false }" class="bg-white p-4 fixed lg:static w-full z-40 top-0" >
-    <div id="navbar" class="flex flex-row justify-between">
-        <div id="logo" class="my-auto lg:text-2xl">
+<div x-data="{ showmenu: false }" class=" text-black bg-white p-4 fixed lg:static w-full z-40 top-0" >
+    <div id="navbar" class="flex flex-row items-center justify-between">
+        <div id="logo" class="my-auto lg:text-1xl">
             <a href="/">
-                <img src="public/logo_b.png" alt="" class="sm:max-h-[80px] md:max-h-[100px] lg:max-h-[160px]">
+                <img src="public/logo_b.png" alt="" class="sm:max-h-12.5 md:max-h-15 lg:max-h-17.5">
             </a>
         </div>
         <!-- Desktop Menu -->
-        <nav id="desktopmenu" class="hidden lg:block content-center sticky top-0">
-            <ul class="lg:flex flex-row gap-12 text-black">
-                <li> <Link href="/klima">FORSTÅ KLIMAET</Link></li>
-                <li> <Link href="/todo">HVAD KAN DU GØRE?</Link></li>
+        <nav id="desktopmenu" class="hidden lg:block content-center sticky top-0 bg-white z-50">
+            <ul class="lg:flex flex-row gap-12 items-center text-black">
+                <li><a href="/klima" class="text-black!">FORSTÅ KLIMAET</a></li>
+                <li><a href="/todo" class="text-black!">HVAD KAN DU GØRE?</a></li>
                 <li><div class="pr-20"><Button>DEBAT</Button></div></li>
             </ul>
-             
         </nav>
         <button id="burgermenu" class="lg:hidden text-2xl font-bold text-dark-green uppercase bg-white px-4 py-2 rounded shadow" x-on:click="showmenu = ! showmenu">Menu</button>
     </div>
     <!-- Mobile menu -->
-    <nav id="mobilmenu" class="flex flex-col content-center justify-content-center pt-4 bg-white " 
+    <nav id="mobilmenu" class="flex flex-col content-center justify-content-center pt-4 text-black bg-white z-50" 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
         <ul class="flex flex-col text-center gap-10 py-10 text-black">
-            <li> <Link href="/klima">FORSTÅ KLIMAET</Link></li>
-            <li> <Link href="/todo">HVAD KAN JEG GØRE?</Link></li>
-            <li><div class="px-auto elementmedanimation2"><Button>DEBAT</Button></div> </li>
+            <li><a href="/klima" class="text-black!">FORSTÅ KLIMAET</a></li>
+            <li><a href="/todo" class="text-black!">HVAD KAN JEG GØRE?</a></li>
+            <li><div class="px-auto elementmedanimation2"><Button>DEBAT</Button></div></li>
         </ul>
     </nav>
 </div>
