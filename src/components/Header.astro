@@ -3,7 +3,7 @@ import Link from "./Link.astro";
 import Button from "./Button.astro";
 
 ---
-<div x-data="{ showmenu: false }" class="bg-dark-green p-4 fixed lg:static w-full bgg-slate-200 z-40 top-0" >
+<div x-data="{ showmenu: false }" class="bg-white p-4 fixed lg:static w-full z-40 top-0" >
     <div id="navbar" class="flex flex-row justify-between">
         <div id="logo" class="my-auto lg:text-2xl">
             <a href="/">
@@ -12,21 +12,22 @@ import Button from "./Button.astro";
         </div>
         <!-- Desktop Menu -->
         <nav id="desktopmenu" class="hidden lg:block content-center sticky top-0">
-            <ul class="lg:flex flex-row gap-12 ">
+            <ul class="lg:flex flex-row gap-12 text-black">
                 <li> <Link href="/klima">FORSTÅ KLIMAET</Link></li>
                 <li> <Link href="/todo">HVAD KAN DU GØRE?</Link></li>
                 <li><div class="pr-20"><Button>DEBAT</Button></div></li>
             </ul>
              
         </nav>
-        <button id="burgermenu" class="lg:hidden text-2xl font-bold text-white uppercase" x-on:click="showmenu = ! showmenu">Menu</button>
+        <button id="burgermenu" class="lg:hidden text-2xl font-bold text-dark-green uppercase bg-white px-4 py-2 rounded shadow" x-on:click="showmenu = ! showmenu">Menu</button>
     </div>
     <!-- Mobile menu -->
-    <nav id="mobilmenu" class="flex flex-col content-center justify-content-center pt-4 bg-dark-green " 
+    <nav id="mobilmenu" class="flex flex-col content-center justify-content-center pt-4 bg-white " 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-        <ul class="flex flex-col text-center gap-10 py-10">
+        <ul class="flex flex-col text-center gap-10 py-10 text-black">
             <li> <Link href="/klima">FORSTÅ KLIMAET</Link></li>
             <li> <Link href="/todo">HVAD KAN JEG GØRE?</Link></li>
-            <li><div class="px-auto"><Button>DEBAT</Button></div> </li>
+            <li><div class="px-auto elementmedanimation2"><Button>DEBAT</Button></div> </li>
+        </ul>
     </nav>
 </div>
