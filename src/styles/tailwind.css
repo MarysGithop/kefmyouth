@@ -18,7 +18,7 @@
   --color-green1: #28948C;
 
   /* Costum theme fonts */
-  --font-sans: "Poppins";
+  --font-sans: "roboto";
 }
 
 @layer base {
