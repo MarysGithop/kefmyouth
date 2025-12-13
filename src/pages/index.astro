@@ -1,9 +1,292 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/MainLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Burger from "../components/Burger.astro";
+import Nyhedsbrev from "../components/Nyhedsbrev.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import Ressource from "../components/Ressource.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="Titel">
+	<article class="[&_section]:pb-12 [&_h1]:text-5xl lg:[&_h1]:text-[64px] [&_h1]:uppercase [&_h1]:font-bold bg-neutral">
+			<!-- Hero -->
+			<section class="px-[10px] bg-dark-green">
+				<div class="lg:flex lg:max-w-[1200px] mx-auto">
+					<div class="lg:order-2 sm:mb-[100px]">
+						<img src="/illustrations/hero.svg" alt="" class="mb-12 lg:mb-0">
+					</div>
+					<div class="content-center">
+						<div class="text-white [&_*]:mb-4">
+							<h1 class="mb-4">Digital <br> Cleanup Day</h1>
+							<p>Lad os rydde op i vores digitale affald på <span class="text-accent-orange">World Cleanup Day</span> og gøre vores del for miljøet!</p>
+							<div class="flex gap-8">
+								<Button variant="secondary" size="small">Inviter en ven</Button>
+								<Button size="small">Registrer dit bidrag</Button>
+							</div>
+						</div>
+						<div class="[&_span]:text-white grid sm:grid-cols-1 lg:grid-cols-2 animate-bounce py-12 ">
+							<div class="row-start-1 col-start-1 m-auto"><img src="/illustrations/shape.svg" alt=""></div>
+							<div class="row-start-1 col-start-1 m-auto z-2">
+								<img src="/illustrations/megaphone.svg" alt="" class="mx-auto">
+								<p class="text-xl font-bold uppercase text-green1">
+								<span>Save the date</span> <br>
+								15. Marts 2025 
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+		
+			<img src="/dividers/bottom1.svg" alt="" class=" mt-0">
+
+			<!-- Short About -->
+			<section class="px-[10px] text-dark-blue bg-neutral grid gap-32 justify-items-center [&_h2]:text-[36px] [&_h2]: [&_h2]:font-bold lg:-mb-32">
+				<div class="lg:grid lg:grid-cols-2 gap-24 lg:max-w-[1100px] content-center elementmedanimation2">
+					<img src="/illustrations/trash.svg" alt="" class="pt-24 pb-12 lg:py-0">
+					<div>
+						<h2>Hvad er digitalt affald?</h2>
+						<p>Den digitale verden ligner den fysiske verden, vi lever i. <br><br>
+							Hver dag genererer vi en enorm mængde affald, når vi forbruger ting. 
+							De data, vi producerer, bruger og gemmer på vores smartphones, 
+							tablets, bærbare computere, pc'er og servere, er ufatteligt store. <br><br>
+							Du er måske ikke klar over det, men internettets CO2-aftryk og de systemer, 
+							der understøtter det, står i dag for ca. 3,7 % af den globale udledning af 
+							drivhusgasser. Det svarer til den mængde CO2, der produceres globalt af 
+							flyindustrien (før COVID). Inden for det næste årti viser undersøgelser, 
+							at internetnetværket vil producere 20 % af verdens drivhusgasser.</p>
+					</div>
+				</div>
+				
+				<div class="lg:grid lg:grid-cols-2 gap-24 lg:max-w-[1100px] elementmedanimation3">
+					<img src="/illustrations/character.svg" alt="" class="sm:pt-24 sm:pb-12 lg:col-start-2 lg:row-start-1 lg:py-0">
+					<div>
+						<h2>Hvad er "Digital <br>Cleanup Day"?</h2>
+						<p>Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, 
+							ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. <br><br>
+							Nu i sit femte år og organiseret af Let's Do It World har Digital 
+							Cleanup Day til formål at øge bevidstheden om digital forurening 
+							og opfordre både enkeltpersoner og virksomheder til at rydde op 
+							og omstrukturere deres online tilstedeværelse.</p>
+					</div>
+					
+				</div>
+			</section>
+
+			<img src="/dividers/top2.svg" alt="" class="z-10">
+			
+			<!-- Hook -->
+			<section class="bg-dark-green z-10">
+				<div class="lg:grid lg:grid-cols-2 mt-24 lg:px-56 py-36 lg:gap-24">
+					<img src="/illustrations/bulldozer.svg" alt="" class="">
+					<h1 class="text-white">HJÆLP MED AT REDDE VERDENEN EN DIGITAL SLETNING AF GANGEN</h1>
+				</div>
+			</section>
+
+			<img src="/dividers/bottom1.svg" alt="">
+
+			<!-- Problemet med digitalt affald... -->
+			<section id="facts" class="text-dark-blue">
+				<h2 class="lg:mx-auto text-center pb-8">Problemet med digitalt affald...</h2>
+				<div class=" lg:grid lg:grid-cols-3 max-w-[1200px] mx-auto [&_img]:pb-4 elementmedanimation1">
+					<div class="[&_div]:   py-8 flex justify-center">
+						<div>
+							<img src="/facts/bitcoin.svg" alt="">
+							<p>Det kræver mere energi at mine Bitcoin, end hele New Zealand forbruger på et år.</p>
+						</div>
+					</div>
+					<div class="[&_div]:   py-8 flex justify-center">
+						<div>
+							<img src="/facts/co2.svg" alt="">
+							<p>Internettet producerer mere end 900 millioner tons CO2 hvert år..</p>
+						</div>
+					</div>
+					<div class="[&_div]:   py-8 flex justify-center">
+						<div>
+							<img src="/facts/solar.svg" alt="">
+							<p>Ubegrænset datakonsum i dag kræver 3 gange mere energi, end alle verdens solpaneler kan producere.</p>
+						</div>
+					</div>
+					<div class="[&_div]:   py-8 flex justify-center">
+						<div>
+							<img src="/facts/emailenergy.svg" alt="">
+							<p>Én e-mail udleder i gennemsnit 4g CO2 = kulstofaftrykket fra en tændt lyspære i 6 minutter</p>
+						</div>
+					</div>
+					<div class="[&_div]:   py-8 flex justify-center">
+						<div>
+							<img src="/facts/worlddata.svg" alt="">
+							<p>På blot ét år (2007) blev der skabt en zettabyte data på verdensplan I 2010 var dette fordoblet. </p>
+						</div>
+					</div>
+					<div class="[&_div]:   py-8 flex justify-center">
+						<div>
+							<img src="/facts/email2.svg" alt="">
+							<p>320 milliarder e-mails sendes hver dag og 62 billioner spam-e-mails hvert år = 20 millioner tons CO2.</p>
+						</div>
+					</div>
+					<div class="[&_div]:   py-8 flex justify-center">
+						<div>
+							<img src="/facts/trees.svg" alt="">
+							<p>I 2035 vil vi skabe mere end 2.000 zettabytes. <br> <br>
+								For at printe én zettabyte data ville der være brug for papir fra 20 billioner træer. <br> <br>
+								Der er kun omkring 3,5 billioner træer tilbage på planeten, så det er ikke muligt.</p>
+						</div>
+					</div>
+					<div class="[&_div]:   py-8 flex justify-center">
+						<div>
+							<img src="/facts/servers.svg" alt="">
+							<p>I 2022 blev omkring 70 millioner servere brugt til at lagre data. <br><br>
+								Hver af dem forårsagede produktionen af 1–2 tons CO2. <br><br>
+								Det år blev omkring 20 millioner af dem til e-affald. <br><br>
+								99% af data blev skabt inden for de sidste 10 år.</p>
+						</div>
+					</div>
+					<div class="[&_div]:   py-8 flex justify-center">
+						<div>
+							<img src="/facts/waste.svg" alt="">
+							<p>90% af al data bliver aldrig tilgået igen efter 3 måneder.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<img src="/dividers/top1.svg" alt="">
+			<!-- In numbers -->
+			<section class=" bg-dark-green text-white [&_span]:text-accent-orange">
+				<h1 class="max-w-200 pt-20 lg:max-w-[1000px] lg:mx-auto lg:text-center">Lad os rydde op i vores digitale affald på <span>World Cleanup Day</span> og gøre vores del for miljøet!</h1>
+				<div class="lg:grid grid-cols-3 mb-18 max-w-[1400px] mx-auto">
+					<div class="mt-18 flex flex-row justify-center text-center">
+						<div class="sm:justify-items-center-center">
+							<img src="/illustrations/group.svg" alt="">
+							<h2>1,184,747</h2>
+							<p>participants</p>
+						</div>
+					</div>
+					<div class="mt-18 flex flex-row justify-center text-center">
+						<div class="sm:justify-items-center-center">
+							<img src="/illustrations/piechart.svg" alt="">
+							<h2>14.5 M GB</h2>
+							<p>of data deleted</p>
+						</div>
+					</div>
+					<div class="mt-18 flex flex-row justify-center text-center">
+						<div class="sm:justify-items-center-center">
+							<img src="/illustrations/co2sky.svg" alt="" class="mx-auto">
+							<h2>3,625 tons</h2>
+							<p>of CO2 production prevented annually</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- form -->
+				 <div class="lg:grid lg:grid-cols-2">
+					<div class="bg-accent-orange text-white p-12 content-center ">
+						<div class="mx-auto">
+							<h4 class="pb-8 lg:max-w-80">Vær cool – giv ikke global opvarmning næring med digitalt affald</h4>
+							<h2 class="lg:max-w-120">SKÆR NED PÅ DIT CO2”-AFTRYK VED AT DELTAGE I DIGITAL CLEANUP DAY</h2>
+						</div>
+					</div>
+					<div class="bg-gray-200 p-12">
+						<form action="" class="[&_div]:pb-8 [&_input]:border-0 [&_input]:rounded-md max-w-100 mx-auto">
+							<div class="grid grid-cols-1">
+								<label for="name">Dit navn:</label>
+								<input type="text" id="name" placeholder="">
+							</div>
+							<div class="grid grid-cols-1">
+								<label for="email">Email</label>
+								<input type="text" id="name" placeholder="">
+							</div>
+							<div class="grid grid-cols-1">
+								<label for="amount">Mængde slettet (i GB)</label>
+								<input type="text" id="name" placeholder="">
+							</div>
+							<div class="text-xs">
+								<input type="checkbox">
+								<label for="agree" checked="checked">* Jeg er enig i <span class="text-accent-orange">Let's Do It, World's vilkår og betingelser</span></label>
+							</div>
+							<div class="text-xs">
+								<input type="checkbox">
+								<label for="newsletter" checked="checked">Jeg vil gerne tilmelde mig nyheder fra World Cleanup Day</span></label>
+							</div>
+							<div class="">
+								<Button variant="primary" size="medium">Indsend</Button>
+							</div>
+						</form>
+					</div>
+				</div>
+	</article>
+</MainLayout>
+
+<style>
+	section{
+		padding: 24px 10px;
+	}
+
+	#facts p{
+		max-width: 25ch;
+	}
+	#facts img{
+		max-height: 100px;
+	}
+
+	/* h1{
+		font-size: 64px;
+		font-weight: bold;
+	} */
+	h2{
+		font-size: 36px;
+		font-weight: bold;
+	}
+	h3{
+		font-size: 24px;
+		font-weight: bold;
+	}
+	h4{
+		font-size: 16px;
+		font-weight: bold;
+	}
+	p{
+		font-size: 16px;
+	}
+</style>
+
+<script>
+
+	import { inView } from "motion";
+	
+	 
+	
+	const elementmedanimation1 = document.querySelector(".elementmedanimation1");
+	
+	inView(elementmedanimation1, () => {
+	
+	elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-.8s");
+	
+	}); 
+	
+	 
+	
+	const elementmedanimation2 = document.querySelector(".elementmedanimation2");
+	
+	inView(elementmedanimation2, () => {
+	
+	elementmedanimation2.classList.add("animate__animated", "animate__fadeInLeft" , "animate__delay-.8s");
+	
+	}); 
+	
+	
+	const elementmedanimation3 = document.querySelector(".elementmedanimation3");
+	
+	inView(elementmedanimation3, () => {
+	
+	elementmedanimation3.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-.8s");
+	
+	}); 
+	
+	</script>

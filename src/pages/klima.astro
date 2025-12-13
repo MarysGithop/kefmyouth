@@ -1,0 +1,59 @@
+---
+import MainLayout from "../layouts/Layout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import Becool from "../components/Becool.astro";
+import Ressource from "../components/Ressource.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<MainLayout title="Titel">
+
+
+	 <section style="background-color: #0A5E58">
+
+<h1 class="text-white mt-0 pt-10 text-center text-[64px] uppercase font-bold ">Ressourcer og materialer</h1>
+
+<div class=" place-content-center grid sm:grid-cols-1 lg:grid-cols-2 p-4  gap-0 lg:gap-4 max-w-[1200px] mx-auto">
+  <div class="mt-0 p-2">
+    <Ressource>Retningslinjer for enkeltpersoner</Ressource>
+    <Ressource>Retningslinjer for skoler</Ressource>
+    <Ressource>Sådan rydder du op i din computer og dit drev</Ressource>
+    <Ressource>Sådan rydder du op på din smartphone og tablet</Ressource>
+    <Ressource>Indsamling af deltagerdata 2</Ressource>
+  </div>
+  <div class="mt-0 p-2">
+    <Ressource>Retningslinjer for virksomheder</Ressource>
+    <Ressource>Retningslinjer for kommuner</Ressource>
+    <Ressource>Sådan rydder du op i dine e-mails</Ressource>
+    <Ressource>Indsamling af deltagerdata 1</Ressource>
+    <Ressource>Markedsføringsmaterialer</Ressource>
+  </div>
+</div>
+
+<!-- <div class=" place-content-center grid sm:grid-cols-1  lg:grid-cols-2 p-30 gap-10">
+  <div class="mt-0 p-2">
+    <Ressource>Retningslinjer for enkeltpersoner</Ressource>
+    <Ressource>Retningslinjer for skoler</Ressource>
+    <Ressource>Sådan rydder du op i din computer og dit drev</Ressource>
+    <Ressource>Sådan rydder du op på din smartphone og tablet</Ressource>
+    <Ressource>Indsamling af deltagerdata 2</Ressource>
+  </div>
+  <div class="mt-0 p-2">
+    <Ressource>Retningslinjer for virksomheder</Ressource>
+    <Ressource>Retningslinjer for kommuner</Ressource>
+    <Ressource>Sådan rydder du op i dine e-mails</Ressource>
+    <Ressource>Indsamling af deltagerdata 1</Ressource>
+    <Ressource>Markedsføringsmaterialer</Ressource>
+  </div>
+</div> -->
+
+
+
+	</section>
+
+
+
+	
+</MainLayout>
