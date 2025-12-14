@@ -32,15 +32,16 @@ const { title } = Astro.props;
 		  "/tinderkort4.png",
 		  "/tinderkort5.png",
 		];
-	  
-		let currentIndex = 0;
-		const card = document.getElementById("tinderCard");
-	  
-		card.addEventListener("click", () => {
-		  currentIndex = (currentIndex + 1) % images.length;
-		  card.src = images[currentIndex];
-		});
+
+  let currentIndex = 0;
+  const card = document.getElementById("tinderCard");
+
+  card.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    card.src = images[currentIndex];
+  });
 	  </script>
+	  
 
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&display=swap');

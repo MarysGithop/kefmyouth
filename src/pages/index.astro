@@ -30,16 +30,25 @@ import Footer from "../components/Footer.astro";
 
 
 					<div class="sm:p-10 flex justify-center items-start lg:-mt-48 -mt-30">
-						<img id="tinderCard" src="tinderkort1.png" alt="tinderkort1" class=" max-w-full h-auto mt-8 cursor-pointer transition-opacity duration-300" />
+						<img id="tinderCard" src="tinderkort1.png" alt="tinderkort1" class=" max-w-full h-auto mt-8 cursor-pointer select-none" />
 					</div>
 
 					<div class="relative w-full max-w-md flex flex-col justify-center items-center lg:-mt-48 -mt-32">
-						<img id="tinderCard"
+						<img id="tinderCard" id="swipeBtn"
 						  src="/batch_frame.png"
 						  alt="batch"
 						  class="p-10 w-full max-w-full h-auto "
 						/>
 					  
+						<div id="progressText" class="font-semibold mb-2">0 / 15 kort gennemgået</div>
+
+						<div class="w-full max-w-md bg-gray-300 rounded-xl overflow-hidden h-6 mb-4">
+						  <div id="progressBar" class="bg-green-500 h-6 w-0 transition-all duration-300 text-center text-white font-medium"></div>
+						</div>
+					  
+					  
+						
+
 						<!-- TEKSTBOKS MED SPILLEREGLER -->
 						<div
 						  class="absolute top-10 left-18 right-6 text-white p-4 rounded-lg text-sm "
