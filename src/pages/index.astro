@@ -33,8 +33,7 @@ import Footer from "../components/Footer.astro";
 					</div>
 
 					<div class="relative w-full max-w-md flex flex-col justify-center items-center lg:-mt-48 -mt-32">
-						<img id="tinderCard" id="swipeBtn"
-						  src="/batch_frame.png"
+						<img src="/batch_frame.png"
 						  alt="batch"
 						  class="p-10 w-full max-w-full h-auto "
 						/>
@@ -164,15 +163,15 @@ import Footer from "../components/Footer.astro";
 							</div>
 							<div class="text-white grid grid-cols-1">
 								<label for="email">Email</label>
-								<input type="text" id="name" placeholder="">
+								<input type="text" id="email" placeholder="">
 							</div>
 							<div class="text-white text-xs">
-								<input type="checkbox">
-								<label for="agree" checked="checked">* Jeg er enig i <span class="text-red">KEFMYOUTH's vilkår og betingelser</span></label>
+								<input type="checkbox" id="agree" checked>
+								<label for="agree">* Jeg er enig i <span class="text-red">KEFMYOUTH's vilkår og betingelser</span></label>
 							</div>
 							<div class="text-white text-xs">
-								<input type="checkbox">
-								<label for="newsletter" checked="checked">Jeg vil gerne tilmelde mig nyheder fra KEFMYOUTH</span></label>
+								<input type="checkbox" id="newsletter" checked>
+								<label for="newsletter">Jeg vil gerne tilmelde mig nyheder fra KEFMYOUTH</label>
 							</div>
 							<div class="text-white">
 								<Button variant="tertiary" size="medium">SEND</Button>
@@ -232,37 +231,35 @@ import Footer from "../components/Footer.astro";
 	}
 </style>
 
-<script>
-
-	import { inView } from "motion";
-	
-	 
-	
-	const elementmedanimation1 = document.querySelector(".elementmedanimation1");
-	
-	inView(elementmedanimation1, () => {
-	
-	elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-.8s");
-	
-	}); 
-	
-	 
-	
-	const elementmedanimation2 = document.querySelector(".elementmedanimation2");
-	
-	inView(elementmedanimation2, () => {
-	
-	elementmedanimation2.classList.add("animate__animated", "animate__fadeInLeft" , "animate__delay-.8s");
-	
-	}); 
-	
-	
-	const elementmedanimation3 = document.querySelector(".elementmedanimation3");
-	
-	inView(elementmedanimation3, () => {
-	
-	elementmedanimation3.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-.8s");
-	
-	}); 
-	
-	</script>
+<script is:inline>
+// Animationer
+if (window && window.matchMedia) {
+  const elementmedanimation1 = document.querySelector(".elementmedanimation1");
+  if (elementmedanimation1) {
+    elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp", "animate__delay-.8s");
+  }
+  const elementmedanimation2 = document.querySelector(".elementmedanimation2");
+  if (elementmedanimation2) {
+    elementmedanimation2.classList.add("animate__animated", "animate__fadeInLeft", "animate__delay-.8s");
+  }
+  const elementmedanimation3 = document.querySelector(".elementmedanimation3");
+  if (elementmedanimation3) {
+    elementmedanimation3.classList.add("animate__animated", "animate__fadeInRight", "animate__delay-.8s");
+  }
+}
+// Tinder card click counter
+let tinderClicks = 0;
+const totalCards = 15;
+const tinderCard = document.querySelector('#tinderCard');
+const progressText = document.getElementById('progressText');
+const progressBar = document.getElementById('progressBar');
+if (tinderCard && progressText && progressBar) {
+  tinderCard.addEventListener('click', () => {
+    if (tinderClicks < totalCards) {
+      tinderClicks++;
+      progressText.textContent = `${tinderClicks} / ${totalCards} kort gennemgået`;
+      progressBar.style.width = `${(tinderClicks / totalCards) * 100}%`;
+    }
+  });
+}
+</script>
