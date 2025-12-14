@@ -10,3 +10,13 @@ export default defineConfig({
   },
   integrations: [alpinejs()],
 });
+
+card.addEventListener("click", () => {
+  card.classList.add("opacity-0");
+
+  setTimeout(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    card.src = images[currentIndex];
+    card.classList.remove("opacity-0");
+  }, 300);
+});

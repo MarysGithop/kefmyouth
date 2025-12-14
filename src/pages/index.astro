@@ -24,34 +24,61 @@ import Footer from "../components/Footer.astro";
 			<img src="/dividers/bottom1.svg" alt="">
 
 			<!-- KLIMA TINDER -->
-			<section class="px-2.5 py-56 text-white bg-[#EC425A] grid gap-32 justify-items-start text-left [&_h2]:text-[36px] [&_h2]: [&_h2]:font-bold lg:-mb-32 min-h-225 lg:min-h-300">
-				<h2 class="p-5 align-left lg:ml-40 lg:mt-30 ">VELKOMMEN TIL KLIMA - TINDER <br> Er du fan, eller ikke fan? </h2>
+			<section class="px-2.5 py-56 text-white bg-[#EC425A] grid justify-items-start text-left [&_h2]:text-[36px] [&_h2]: [&_h2]:font-bold lg:-mb-32 min-h-225 lg:min-h-300">
+				<h2 class="p-5 align-left lg:mb-40 lg:ml-40 lg:mt-15  ">VELKOMMEN TIL KLIMA - TINDER <br> Er du fan, eller ikke fan? </h2>
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:max-w-5xl w-full mx-auto items-start">
-					<div class="flex justify-center items-start lg:-mt-48 -mt-32">
-						<img src="tinderkort1.png" alt="tinderkort1" class="max-w-full h-auto" />
+
+
+					<div class="sm:p-10 flex justify-center items-start lg:-mt-48 -mt-30">
+						<img id="tinderCard" src="tinderkort1.png" alt="tinderkort1" class=" max-w-full h-auto mt-8 cursor-pointer transition-opacity duration-300" />
 					</div>
-					<div class="flex flex-col justify-center items-center lg:-mt-48 -mt-32">
-						<img class="p-10" src="public/batch_frame.png" alt="batch" class="max-w-full h-auto" />
-						<div class="flex flex-row items-center gap-2 w-full mt-4">
-							<img src="public/insta_farve.png" alt="instafarve" class="max-w-full h-auto mb-0" />
-							<p class="text-left mb-0">Del med dine venner hvad du gør for klimaet her! </p>
+
+					<div class="relative w-full max-w-md flex flex-col justify-center items-center lg:-mt-48 -mt-32">
+						<img id="tinderCard"
+						  src="/batch_frame.png"
+						  alt="batch"
+						  class="p-10 w-full max-w-full h-auto "
+						/>
+					  
+						<!-- TEKSTBOKS MED SPILLEREGLER -->
+						<div
+						  class="absolute top-10 left-18 right-6 text-white p-4 rounded-lg text-sm "
+						>
+						  <p>
+							<br/>
+							Swipe dig til et bedre <br/>klima ved at give<br/> dine holdninger til<br/> kende - <br/><br/>Opnå et klima batch <br/>du kan dele med dine <br/>venner, når du har<br/> swipet 10 gange!<br />
+						  </p>
 						</div>
+					  </div>
+					  <div class="flex flex-row items-center gap-2 w-full lg:mb-50 lg:ml-150 ml-15">
+						<img src="public/insta_farve.png" alt="instafarve" class="max-w-full h-auto mb-0" />
+						<p class="text-left mb-0">Del med dine venner hvad <br> du gør for klimaet her! </p>
 					</div>
 					
 				</div>
 			</section>
 
-			<img src="/dividers/top2.svg" alt="" class="z-10">
-			
-			<!-- ACTNOW -->
-			<section 
-			div class=" bg-white flex flex-row items-center lg:grid lg:grid-cols-2 py-24  mx-auto elementmedanimation1; ">
-				<img class="w-full h-full mx-auto object-contain" src="public/actnow.jpg" alt="act">
-				<img class="w-full h-full mx-auto object-contain" src="public/actnow.jpg" alt="act">
-			
-			
+
+				<!-- ACTNOW -->
+			<section class="bg-white py-24">
+				<div
+				  class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start elementmedanimation1"
+				>
+				  <img
+					src="/actnow.jpg"
+					alt="Act now"
+					class="w-500 h-auto object-contain"
+				  />
+			  
+				  <img
+					src="/collage.png"
+					alt="Collage"
+					class="w-244 h-218 object-contain"
+				  />
 				</div>
-			</section>
+			  </section>
+
+
 
 		
 
