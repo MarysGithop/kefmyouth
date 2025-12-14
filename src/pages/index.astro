@@ -9,8 +9,8 @@ import Footer from "../components/Footer.astro";
 ---
 
 <MainLayout title="Titel">
-	<article class="[&_section]:pb-12 [&_h1]:text-1xl lg:[&_h1]:text-[50px] [&_h1]:uppercase [&_h1]:font-bold bg-neutral">
-			<!-- Hero -->
+	<article class="[&_section]:pb-12 [&_h1]:text-1xl lg:[&_h1]:text-[50px] [&_h1]:uppercase [&_h1]:font-bold bg-neutral ">
+			<!-- HERO -->
 			<section class="relative px-2.5 bg-dark-green min-h-125 lg:min-h-162.5 flex items-end">
 				<img src="/hero.jpg" alt="Hero background" class="absolute inset-0 w-full h-full object-cover z-0" style="object-position: top;" />
 				<img src="/heroshade_blue.png" alt="Hero shade" class=" absolute bottom-0 left-0 w-full h-30 lg:h-48 z-10 pointer-events-none" style="object-fit:cover;" />
@@ -23,15 +23,15 @@ import Footer from "../components/Footer.astro";
 		
 			<img src="/dividers/bottom1.svg" alt="">
 
-			<!-- Short About -->
+			<!-- KLIMA TINDER -->
 			<section class="px-2.5 py-56 text-white bg-[#EC425A] grid gap-32 justify-items-start text-left [&_h2]:text-[36px] [&_h2]: [&_h2]:font-bold lg:-mb-32 min-h-225 lg:min-h-300">
-				<h2 class="p-5 align-left ml-40 mt-30 ">VELKOMMEN TIL KLIMA - TINDER <br> Er du fan, eller ikke fan? </h2>
+				<h2 class="p-5 align-left lg:ml-40 lg:mt-30 ">VELKOMMEN TIL KLIMA - TINDER <br> Er du fan, eller ikke fan? </h2>
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:max-w-5xl w-full mx-auto items-start">
 					<div class="flex justify-center items-start lg:-mt-48 -mt-32">
 						<img src="tinderkort1.png" alt="tinderkort1" class="max-w-full h-auto" />
 					</div>
 					<div class="flex flex-col justify-center items-center lg:-mt-48 -mt-32">
-						<img src="public/batch_frame.png" alt="batch" class="max-w-full h-auto" />
+						<img class="p-10" src="public/batch_frame.png" alt="batch" class="max-w-full h-auto" />
 						<div class="flex flex-row items-center gap-2 w-full mt-4">
 							<img src="public/insta_farve.png" alt="instafarve" class="max-w-full h-auto mb-0" />
 							<p class="text-left mb-0">Del med dine venner hvad du gør for klimaet her! </p>
@@ -43,11 +43,11 @@ import Footer from "../components/Footer.astro";
 
 			<img src="/dividers/top2.svg" alt="" class="z-10">
 			
-			<!-- Hook -->
+			<!-- ACTNOW -->
 			<section 
-			div class="flex flex-row items-center ">
-				<img src="public/actnow.jpg" alt="act">
-				<img src="public/actnow.jpg" alt="act">
+			div class=" bg-white flex flex-row items-center lg:grid lg:grid-cols-2 py-24  mx-auto elementmedanimation1; ">
+				<img class="w-full h-full mx-auto object-contain" src="public/actnow.jpg" alt="act">
+				<img class="w-full h-full mx-auto object-contain" src="public/actnow.jpg" alt="act">
 			
 			
 				</div>
@@ -55,102 +55,61 @@ import Footer from "../components/Footer.astro";
 
 		
 
-			<!-- Problemet med digitalt affald... -->
-			<section id="facts" class="text-dark-blue">
-				<h2 class="lg:mx-auto text-center pb-8">Problemet med digitalt affald...</h2>
-				<div class=" lg:grid lg:grid-cols-3 max-w-300 mx-auto elementmedanimation1">
-					<div class="[&_div]:   py-8 flex justify-center">
-						<div>
-							<img src="/facts/bitcoin.svg" alt="">
-							<p>Det kræver mere energi at mine Bitcoin, end hele New Zealand forbruger på et år.</p>
+			<!-- SOCIAL PROOF -->
+			<section id="facts" class="text-[#00464C] py-16">
+				<h2 class="lg:mx-auto text-center pb-8 ">Læs om andre unge der har fokus og indflydelse på klimaet til hverdag!</h2>
+				<div class=" lg:grid lg:grid-cols-3 py-24  mx-auto elementmedanimation1">
+					
+					
+					<div class="py-8 flex justify-center">
+						<div class="w-72">
+							<div><img class=" w-full h-70 mx-auto object-contain" src="/mette.png" alt=""></div>
+							<h4>Mette, 24</h4>
+							<p>”Jeg synes, det er rart at være tæt på det politiske og at kunne  mærke, at noget, jeg sidder med, faktisk har en reel betydning ude i  samfundet. Det motiverer mig meget.”</p>
 						</div>
 					</div>
 					<div class="[&_div]:   py-8 flex justify-center">
 						<div>
-							<img src="/facts/co2.svg" alt="">
-							<p>Internettet producerer mere end 900 millioner tons CO2 hvert år..</p>
+							<img class="w-full h-full object-contain" src="/public/aida.png" alt="">
+							<h4>Aida, 27</h4>
+							<p>“Jeg har sjældent haft så godt et arbejdsmiljø og god balance,  som jeg har her. Der er styr på tingene og gode ferie- og  afspadseringsmuligheder, hvilket betyder meget for mig i mit arbejdsliv.”</p>
 						</div>
 					</div>
 					<div class="[&_div]:   py-8 flex justify-center">
 						<div>
-							<img src="/facts/solar.svg" alt="">
-							<p>Ubegrænset datakonsum i dag kræver 3 gange mere energi, end alle verdens solpaneler kan producere.</p>
+							<img class="w-full h-full object-contain" src="/public/asger.png" alt="">
+							<h4>Andreas, 29</h4>
+							<p>“For mig er det vigtigt med både det sociale og min faglige  udvikling. Jeg glæder mig til at komme på arbejde, fordi jeg har gode  kollegaer, men også fordi der bliver lyttet, hvis jeg har ønsker til min udvikling eller gerne vil prøve noget nyt.”</p>
 						</div>
 					</div>
-					<div class="[&_div]:   py-8 flex justify-center">
-						<div>
-							<img src="/facts/emailenergy.svg" alt="">
-							<p>Én e-mail udleder i gennemsnit 4g CO2 = kulstofaftrykket fra en tændt lyspære i 6 minutter</p>
-						</div>
-					</div>
-					<div class="[&_div]:   py-8 flex justify-center">
-						<div>
-							<img src="/facts/worlddata.svg" alt="">
-							<p>På blot ét år (2007) blev der skabt en zettabyte data på verdensplan I 2010 var dette fordoblet. </p>
-						</div>
-					</div>
-					<div class="[&_div]:   py-8 flex justify-center">
-						<div>
-							<img src="/facts/email2.svg" alt="">
-							<p>320 milliarder e-mails sendes hver dag og 62 billioner spam-e-mails hvert år = 20 millioner tons CO2.</p>
-						</div>
-					</div>
-					<div class="[&_div]:   py-8 flex justify-center">
-						<div>
-							<img src="/facts/trees.svg" alt="">
-							<p>I 2035 vil vi skabe mere end 2.000 zettabytes. <br> <br>
-								For at printe én zettabyte data ville der være brug for papir fra 20 billioner træer. <br> <br>
-								Der er kun omkring 3,5 billioner træer tilbage på planeten, så det er ikke muligt.</p>
-						</div>
-					</div>
-					<div class="[&_div]:   py-8 flex justify-center">
-						<div>
-							<img src="/facts/servers.svg" alt="">
-							<p>I 2022 blev omkring 70 millioner servere brugt til at lagre data. <br><br>
-								Hver af dem forårsagede produktionen af 1–2 tons CO2. <br><br>
-								Det år blev omkring 20 millioner af dem til e-affald. <br><br>
-								99% af data blev skabt inden for de sidste 10 år.</p>
-						</div>
-					</div>
-					<div class="[&_div]:   py-8 flex justify-center">
-						<div>
-							<img src="/facts/waste.svg" alt="">
-							<p>90% af al data bliver aldrig tilgået igen efter 3 måneder.</p>
-						</div>
-					</div>
+					<div class="ml-35 lg:ml-150"><Button variant="primary" size="medium">LÆS MERE</Button></div>
+					
+				
 				</div>
 			</section>
 			
-			<img src="/dividers/top1.svg" alt="">
-			<!-- In numbers -->
-			<section class=" bg-dark-green text-white [&_span]:text-accent-orange">
-				<h1 class="max-w-200 pt-20 lg:max-w-250 lg:mx-auto lg:text-center">Lad os rydde op i vores digitale affald på <span>World Cleanup Day</span> og gøre vores del for miljøet!</h1>
+			<!-- CHAT -->
+			<section class=" bg-dark-green text-white">
+				<h1 class="max-w-200 pt-20 lg:max-w-250 lg:mx-auto lg:text-center">Ønsker du kontakt til andre unge, eller har du lyst til at deltage i debat der vedrører klimaet? 
+				<br>	Start debat vinduet her!</h1>
 				<div class="lg:grid grid-cols-3 mb-18 max-w-350 mx-auto">
 					<div class="mt-18 flex flex-row justify-center text-center">
 						<div class="sm:justify-items-center-center">
-							<img src="/illustrations/group.svg" alt="">
-							<h2>1,184,747</h2>
-							<p>participants</p>
+							<img src="" alt="">
+							<h2></h2>
+							<p></p>
 						</div>
 					</div>
 					<div class="mt-18 flex flex-row justify-center text-center">
 						<div class="sm:justify-items-center-center">
-							<img src="/illustrations/piechart.svg" alt="">
-							<h2>14.5 M GB</h2>
-							<p>of data deleted</p>
+							<Button variant="primary" size="medium">DELTAG</Button>
 						</div>
 					</div>
-					<div class="mt-18 flex flex-row justify-center text-center">
-						<div class="sm:justify-items-center-center">
-							<img src="/illustrations/co2sky.svg" alt="" class="mx-auto">
-							<h2>3,625 tons</h2>
-							<p>of CO2 production prevented annually</p>
-						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- form -->
+			<!-- FORM -->
 				 <div class="lg:grid lg:grid-cols-2">
 					<div class="bg-accent-orange text-white p-12 content-center ">
 						<div class="mx-auto">
@@ -158,7 +117,7 @@ import Footer from "../components/Footer.astro";
 							<h2 class="lg:max-w-120">SKÆR NED PÅ DIT CO2”-AFTRYK VED AT DELTAGE I DIGITAL CLEANUP DAY</h2>
 						</div>
 					</div>
-					<div class="bg-gray-200 p-12">
+					<div class="bg-EC425A p-12">
 						<form action="" class="[&_div]:pb-8 [&_input]:border-0 [&_input]:rounded-md max-w-100 mx-auto">
 							<div class="grid grid-cols-1">
 								<label for="name">Dit navn:</label>
@@ -168,20 +127,16 @@ import Footer from "../components/Footer.astro";
 								<label for="email">Email</label>
 								<input type="text" id="name" placeholder="">
 							</div>
-							<div class="grid grid-cols-1">
-								<label for="amount">Mængde slettet (i GB)</label>
-								<input type="text" id="name" placeholder="">
+							<div class="text-xs">
+								<input type="checkbox">
+								<label for="agree" checked="checked">* Jeg er enig i <span class="text-red">KEFMYOUTH's vilkår og betingelser</span></label>
 							</div>
 							<div class="text-xs">
 								<input type="checkbox">
-								<label for="agree" checked="checked">* Jeg er enig i <span class="text-accent-orange">Let's Do It, World's vilkår og betingelser</span></label>
-							</div>
-							<div class="text-xs">
-								<input type="checkbox">
-								<label for="newsletter" checked="checked">Jeg vil gerne tilmelde mig nyheder fra World Cleanup Day</span></label>
+								<label for="newsletter" checked="checked">Jeg vil gerne tilmelde mig nyheder fra KEFMYOUTH</span></label>
 							</div>
 							<div class="">
-								<Button variant="primary" size="medium">Indsend</Button>
+								<Button variant="tertiary" size="medium">SEND</Button>
 							</div>
 						</form>
 					</div>
