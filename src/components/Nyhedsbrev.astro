@@ -1,0 +1,36 @@
+---
+import Button from "./Button.astro";
+---
+!-- FORM -->
+				 <div class="lg:grid lg:grid-cols-2">
+					<div class=" text-white p-12 content-center ">
+						<div class="">
+							<img class="w-full h-full object-contain" src="/public/nyhedsbrev.jpg" alt="">
+						</div>
+					</div>
+					<div class="bg-[#EC425A] p-12">
+						<h3 class="lg:ml-25 pb-8 lg:max-w-80 text-white">Har du lyst til at vide mere om hvordan du kan gøre en forskel?
+							Skriv dig op til vores nyhedsbrev her!</h3>
+						<form action="" class="[&_div]:pb-8 [&_input]:border-0 [&_input]:rounded-md max-w-100 mx-auto">
+							<div class="text-white grid grid-cols-1">
+								<label for="name">Dit navn:</label>
+								<input type="text" id="name" placeholder="">
+							</div>
+							<div class="text-white grid grid-cols-1">
+								<label for="email">Email</label>
+								<input type="text" id="email" placeholder="">
+							</div>
+							<div class="text-white text-xs">
+								<input type="checkbox" id="agree" checked>
+								<label for="agree">* Jeg er enig i <span class="text-red">KEFMYOUTH's vilkår og betingelser</span></label>
+							</div>
+							<div class="text-white text-xs">
+								<input type="checkbox" id="newsletter" checked>
+								<label for="newsletter">Jeg vil gerne tilmelde mig nyheder fra KEFMYOUTH</label>
+							</div>
+							<div class="text-white">
+								<Button variant="tertiary" size="medium">SEND</Button>
+							</div>
+						</form>
+					</div>
+				</div>
