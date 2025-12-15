@@ -60,10 +60,21 @@ import Footer from "../components/Footer.astro";
 					  <div class="flex flex-row items-center gap-2 w-full lg:mb-50 lg:ml-150 ml-15">
 						<img src="public/insta_farve.png" alt="instafarve" class="max-w-full h-auto mb-0" />
 						<p class="text-left mb-0">Del med dine venner hvad <br> du gør for klimaet her! </p>
+					  </div>
 					</div>
-					
-				</div>
-			</section>
+					<!-- Batch popup -->
+					<div id="tinderModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+						<div class="bg-white rounded-lg p-8 max-w-sm w-full text-center shadow-lg relative">
+							<button id="closeTinderModal" class="absolute top-3 right-3 text-3xl text-[#000000] font-bold focus:outline-none" aria-label="Luk">&times;</button>
+							<h3 class="text-2xl font-bold mb-4 text-[#000000]">Tillykke! <img class="drop-shadow-black ml-10" src="/batch.png" alt="batch"></h3>
+							<h3 class="p-4 mb-6 text-[#000000]">Du har swipet 15 gange og opnået et klima batch!<br>
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+    <img class="p-8" src="/insta_black.png" alt="popup">
+  </a>
+</h3>
+						</div>
+					</div>
+				</section>
 
 
 				<!-- ACTNOW -->
@@ -229,6 +240,9 @@ import Footer from "../components/Footer.astro";
 	p{
 		font-size: 16px;
 	}
+
+	#tinderModal.hidden { display: none; }
+	#tinderModal { transition: opacity 0.3s; }
 </style>
 
 <script is:inline>
@@ -253,13 +267,23 @@ const totalCards = 15;
 const tinderCard = document.querySelector('#tinderCard');
 const progressText = document.getElementById('progressText');
 const progressBar = document.getElementById('progressBar');
+const tinderModal = document.getElementById('tinderModal');
+const closeTinderModal = document.getElementById('closeTinderModal');
 if (tinderCard && progressText && progressBar) {
   tinderCard.addEventListener('click', () => {
     if (tinderClicks < totalCards) {
       tinderClicks++;
       progressText.textContent = `${tinderClicks} / ${totalCards} kort gennemgået`;
       progressBar.style.width = `${(tinderClicks / totalCards) * 100}%`;
+      if (tinderClicks === totalCards && tinderModal) {
+        tinderModal.classList.remove('hidden');
+      }
     }
+  });
+}
+if (closeTinderModal && tinderModal) {
+  closeTinderModal.addEventListener('click', () => {
+    tinderModal.classList.add('hidden');
   });
 }
 </script>
