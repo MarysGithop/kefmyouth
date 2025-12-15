@@ -56,12 +56,25 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
       </div>
      
   </div>
-  <div class="relative border-2 border-[#EC425A] rounded-2xl p-4 my-8">
-  <img src="/plant.png" alt="plant" class="absolute -bottom-6 -left-21 w-32 h-32 z-10" />
-    <p class="p-8">
+  <style>
+@keyframes shake {
+  0% { transform: translateX(0) rotate(0deg); }
+  20% { transform: translateX(-4px) rotate(-2deg); }
+  40% { transform: translateX(4px) rotate(2deg); }
+  60% { transform: translateX(-4px) rotate(-2deg); }
+  80% { transform: translateX(4px) rotate(2deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+.plant-shake {
+  animation: shake 0.7s infinite linear;
+}
+</style>
+  <div class="relative border-2 border-[#EC425A] rounded-2xl p-4 my-8 flex flex-col">
+    <p class="p-8 z-20">
       Men klima handler ikke kun om tal. Det handler om fremtidens arbejdspladser, vores fælles hverdag og om at vise, at et moderne samfund godt kan være både grønt, socialt bæredygtigt og økonomisk stærkt på samme tid.
       Her på siden kan du få overblik over, hvad der sker politisk, hvorfor målene er vigtige, og hvordan de påvirker dig og fremtiden.
-    </p> 
+    </p>
+    <img src="/plant.png" alt="plant" class="w-40 h-40 sm:w-32 sm:h-32 md:w-64 md:h-64 mx-auto mt-2 lg:absolute lg:-bottom-6 lg:-left-39 lg:mx-0 lg:mt-0 z-10 plant-shake" />
   </div>
 
   </section>
