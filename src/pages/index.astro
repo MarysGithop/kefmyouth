@@ -11,12 +11,18 @@ import Footer from "../components/Footer.astro";
 			<!-- HERO -->
 			<section class="relative px-2.5 bg-dark-green min-h-125 lg:min-h-162.5 flex items-end">
 				<img src="/hero.jpg" alt="Hero background" class="absolute inset-0 w-full h-full object-cover z-0" style="object-position: top;" />
-				<img src="/heroshade_blue.png" alt="Hero shade" class=" absolute bottom-0 left-0 w-full h-30 lg:h-48 z-10 pointer-events-none" style="object-fit:cover;" />
-				<div class=" absolute bottom-0 left-0 w-full flex flex-col items-start justify-center z-20" style="height:8rem; margin-bottom:2rem; /* rykker teksten op */ @media (min-width:1024px){height:10rem;} /* lg:h-40 */">
-					<div class=" w-full flex flex-col justify-center h-full pl-8">
-						<h1 class=" elementmedanimation3 mb-2 text-white text-left relative z-30 leading-tight">Velkommen til Klima <br>  ministeriets ungdoms side! <br></h1>
-					</div>
-				</div>
+				<img src="/heroshade_blue.png" alt="Hero shade" class="absolute bottom-0 left-0 w-full h-30 lg:h-48 z-10 pointer-events-none" style="object-fit:cover;" />
+				<div class="absolute left-0 w-full flex flex-col items-start justify-center z-20"
+    style="height:8rem; margin-bottom:2rem; @media (min-width:1024px){height:10rem;}"
+  >
+    <div class="w-full flex flex-col justify-center h-full pl-8">
+      <h1 class="elementmedanimation3 mb-2 text-white text-left relative z-30 leading-tight text-xl sm:text-3xl md:text-5xl lg:text-6xl"
+        style="font-size:clamp(1.25rem,4vw,4rem); margin-top:30vw; margin-bottom:0; @media (min-width:640px){margin-top:0;}"
+      >
+        Velkommen til Klima <br>  ministeriets ungdoms side! <br>
+      </h1>
+    </div>
+  </div>
 			</section>
 		
 			
