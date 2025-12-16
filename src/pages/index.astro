@@ -101,37 +101,37 @@ import Footer from "../components/Footer.astro";
 
 			<!-- SOCIAL PROOF -->
 			<section id="facts" class="bg-[#c7e7e9] text-[#00464C] py-16">
-				<h2 class="mt-30 lg:mx-auto text-center pb-8 ">Læs om andre unge der har fokus og <br/> indflydelse på klimaet til hverdag!</h2>
-				<div class=" lg:grid lg:grid-cols-3 py-24  mx-auto elementmedanimation1">
+				<h2 class="mt-30 max-w-3xl mx-auto text-center pb-8 ">Læs om andre unge der har fokus og <br/> indflydelse på klimaet til hverdag!</h2>
+				<div class="lg:grid lg:grid-cols-3 gap-8 py-24 max-w-5xl mx-auto elementmedanimation1">
 					
 					
-					<div class="p-4 rounded-[2vw] w-90 bg-gray-50 py-10 flex justify-center">
-						<div>
+					<div class="rounded-[2vw] w-90 bg-gray-50 py-10 flex justify-center items-center mx-auto">
+						<div class="text-center">
 							<img class="mb-6 rounded-[2vw] w-[100] h-[100] mx-auto object-contain" src="/mette.png" alt="mette">
 							<h4>Mette, 24</h4>
 							<p>Jeg synes, det er rart at være tæt på det politiske og at kunne  mærke, at noget, jeg sidder med, faktisk har en reel betydning ude i  samfundet. Det motiverer mig meget.”</p>
 						</div>
 					</div>
 
-					<div class="p-4 rounded-[2vw] w-90 bg-gray-50 py-10 flex justify-center">
-						<div>
+					<div class="  rounded-[2vw] w-90 bg-gray-50 py-10 flex justify-center items-center mx-auto">
+						<div class="text-center">
 							<img class="mb-6 rounded-[2vw] w-[100] h-[100] mx-auto object-contain" src="/aida.png" alt="aida">
 							<h4>Aida, 27</h4>
 							<p>“Jeg har sjældent haft så godt et arbejdsmiljø og god balance,  som jeg har her. Der er styr på tingene og gode ferie- og  afspadseringsmuligheder, hvilket betyder meget for mig i mit arbejdsliv.”</p>
 						</div>
 					</div>
 
-					<div class="p-4 rounded-[2vw] w-90 bg-gray-50 py-10 flex justify-center">
-						<div>
+					<div class=" rounded-[2vw] w-90 bg-gray-50 py-10 flex justify-center items-center mx-auto">
+						<div class="text-center">
 							<img class="mb-6 rounded-[2vw] w-[100] h-[100] mx-auto object-contain" src="/asger.png" alt="">
 							<h4>Andreas, 29</h4>
 							<p>“For mig er det vigtigt med både det sociale og min faglige  udvikling. Jeg glæder mig til at komme på arbejde, fordi jeg har gode  kollegaer, men også fordi der bliver lyttet, hvis jeg har ønsker til min udvikling eller gerne vil prøve noget nyt.”</p>
 						</div>
 					</div>
 
-					<div class=" p-8 ml-25 lg:ml-140"><Button variant="primary" size="medium">LÆS MERE</Button></div>
-					
-				
+					<div class="lg:justify-center p-8 ml-25 lg:ml-110"><Button variant="primary" size="medium">LÆS MERE</Button></div>
+
+
 				</div>
 			</section>
 			
@@ -214,12 +214,14 @@ import Footer from "../components/Footer.astro";
 		font-family: var(--font-inter), Arial, Helvetica, sans-serif !important;
 	}
 
-	section{
-		padding: 24px 10px;
-	}
 
 	#facts p{
 		max-width: 25ch;
+	}
+
+
+	section{
+		padding: 24px 10px;
 	}
 
 	/* h1{

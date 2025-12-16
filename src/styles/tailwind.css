@@ -33,5 +33,34 @@
 
 @layer components {
 }
+
 @layer utilities {
+}
+
+@keyframes btn-shake {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  10% {
+    transform: translateX(-1.5px) rotate(-1deg);
+  }
+  20% {
+    transform: translateX(1.5px) rotate(1deg);
+  }
+  30% {
+    transform: translateX(-1.5px) rotate(-1deg);
+  }
+  40% {
+    transform: translateX(1.5px) rotate(1deg);
+  }
+  50% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+.btn-shake {
+  animation: btn-shake 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+  animation-delay: 0s;
 }
