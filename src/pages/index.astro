@@ -9,7 +9,7 @@ import Footer from "../components/Footer.astro";
 <MainLayout title="Titel">
 	<article class="[&_section]:pb-12 [&_h1]:text-1xl lg:[&_h1]:text-[50px] [&_h1]:uppercase [&_h1]:font-bold bg-neutral ">
 			<!-- HERO -->
-			<section class="relative px-2.5 bg-dark-green min-h-125 lg:min-h-162.5 flex items-end">
+			<section class="relative px-2.5 bg-dark-green min-h-125 lg:min-h-162.5 flex items-end overflow-x-hidden">
 				<img src="/hero.jpg" alt="Hero background" class="absolute inset-0 w-full h-full object-cover z-0" style="object-position: top;" />
 				<img src="/heroshade_blue.png" alt="Hero shade" class="absolute bottom-0 left-0 w-full h-30 lg:h-48 z-10 pointer-events-none" style="object-fit:cover;" />
 				<div class="absolute left-0 w-full flex flex-col items-start justify-center z-20"
@@ -28,7 +28,7 @@ import Footer from "../components/Footer.astro";
 			
 
 			<!-- KLIMA TINDER -->
-			<section class="px-2.5 py-56 text-white bg-[#FF0456] grid justify-items-start text-left [&_h2]:text-[36px] [&_h2]: [&_h2]:font-bold lg:-mb-32 min-h-225 lg:min-h-300">
+			<section class="px-2.5 py-56 text-white bg-[#FF0456] grid justify-items-start text-left [&_h2]:text-[36px] [&_h2]: [&_h2]:font-bold lg:-mb-32 min-h-225 lg:min-h-300 overflow-x-hidden">
 				<h2 class="p-10 mb-30 align-left lg:mb-40 lg:ml-40 lg:mt-15  ">VELKOMMEN TIL KLIMA - TINDER <br> Er du fan, eller ikke fan? </h2>
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:max-w-5xl w-full mx-auto items-start">
 
@@ -83,7 +83,7 @@ import Footer from "../components/Footer.astro";
 
 
 				<!-- ACTNOW -->
-			<section class="bg-white py-24">
+			<section class="bg-white py-24 overflow-x-hidden">
 				<div
 				  class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start elementmedanimation1"
 				>
@@ -104,7 +104,7 @@ import Footer from "../components/Footer.astro";
 
 
 		<!-- SOCIAL PROOF -->
-		<section id="facts" class="bg-[#c7e7e9] text-[#00464C] py-16">
+		<section id="facts" class="bg-[#c7e7e9] text-[#00464C] py-16 overflow-x-hidden">
 			<h2 class="mt-30 max-w-3xl mx-auto text-center pb-8 ">Læs om andre unge der har fokus og <br/> indflydelse på klimaet til hverdag!</h2>
 
 
@@ -143,9 +143,9 @@ import Footer from "../components/Footer.astro";
 			
 			
 			<!-- CHAT -->
-			<section id="chat" class=" bg-dark-green text-white">
-				<h1 class="max-w-200 pt-20 lg:max-w-250 lg:mx-auto lg:text-center">Ønsker du kontakt til andre unge, eller har du lyst til at deltage i debat der vedrører klimaet? 
-				<br>	Start debat vinduet her!</h1>
+			<section id="chat" class="bg-dark-green text-white overflow-x-hidden">
+	<h1 class="max-w-200 pt-20 lg:max-w-250 mx-auto text-center">Ønsker du kontakt til andre unge, eller har du lyst til at deltage i debat der vedrører klimaet? 
+	<br> Start debat vinduet her!</h1>
 				<div class="lg:grid grid-cols-3 mb-18 max-w-350 mx-auto">
 					<div class="mt-18 flex flex-row justify-center text-center">
 						<div class="sm:justify-items-center-center">
